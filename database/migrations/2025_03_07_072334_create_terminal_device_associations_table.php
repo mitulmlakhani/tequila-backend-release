@@ -16,7 +16,6 @@ class CreateTerminalDeviceAssociationsTable extends Migration
             $table->timestamps();
 
             $table->foreign('terminal_id')->references('id')->on('terminal_settings')->onDelete('cascade');
-            $table->foreign('device_id')->references('id')->on('devices')->onDelete('cascade');
         });
     }
 
